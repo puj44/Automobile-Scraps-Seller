@@ -125,7 +125,7 @@ include('config.php');
 $(document).on('change', '#name', function() {
 	 
  var nm= $('#name').val();
-		 var namePattern = /^([A-Za-z]{2,30})$/;
+		 var namePattern = "/^[a-zA-Z]+ [a-zA-Z]+$/";
 			if( namePattern.test(nm)==true)
 			{
 				return true;
@@ -166,11 +166,7 @@ $(document).on('focus', '#postz', function() {
 			data:{name:name,email_id:email_id,pass:pass,contn:contn,addr:addr,state:state,city:city,user:user,gstn:gstn,postz:postz},
 	
 			success:function(response){
-				//alert(response);
-				console.log(response);
-				console.log(email_id);
-
-				window.location.href = "homepage.php";
+				alert(response);
 			}
 			
             
@@ -196,7 +192,7 @@ $(document).on('focus', '#postz', function() {
 	body{ 
 
 
-  background-image: url('bg.jpg');
+  background-image: url('bodybg/bgimg.png');
    
 
 }
@@ -265,7 +261,7 @@ select {
 
 </head>
 
-<body style="background-image: url('bg.jpg');background-position:50%50%">
+<body style="background-image: url('bodybg/bgimg.jpg')">
 
 
 
